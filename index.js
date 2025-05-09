@@ -8,9 +8,13 @@ app.use(express.json());
 
 app.post("/proxy", async (req, res) => {
   try {
-    const response = await axios.post("https://your-real-api.com/endpoint", req.body, {
-      headers: { "Content-Type": "application/json" }
-    });
+    const response = await axios.post(
+      "https://ai-listing-audit.alfred.hosteasy.ai/api/v0/ai_audit",
+      req.body,
+      {
+        headers: { "Content-Type": "application/json" }
+      }
+    );
     res.json({ success: true, data: response.data });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
