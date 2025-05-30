@@ -6,7 +6,7 @@ const app = express();
 
 //  Explicitly allow your Webflow domain
 app.use(cors({
-  origin: "https://hosteasy-86eed5.webflow.io/listing-audit", // replace with your actual Webflow domain
+  origin: "https://hosteasy-86eed5.webflow.io", // replace with your actual Webflow domain
   methods: ["POST"],
   allowedHeaders: ["Content-Type"]
 }));
